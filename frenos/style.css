@@ -1,0 +1,247 @@
+/* ===== Colores de la marca ===== */
+:root {
+  --color-principal: #8B1E3F;   /* burdeos oscuro */
+  --color-secundario: #C94F7C;  /* rosa fuerte */
+  --color-claro: #F7E6EB;       /* fondo claro */
+  --color-texto: #333333;
+  --color-blanco: #ffffff;
+  --color-gris: #444444;
+  --color-negro: #000000;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: var(--color-secundario);
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--color-claro);
+}
+
+/* ===== Fondo con rayas ===== */
+.bg-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-negro) 0,
+    var(--color-negro) 20px,
+    var(--color-gris) 20px,
+    var(--color-gris) 40px
+  );
+  color: var(--color-blanco);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-negro) 0,
+    var(--color-negro) 30px,
+    var(--color-gris) 30px,
+    var(--color-gris) 60px
+  );
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  margin-top: 70px; /* espacio para el header fijo */
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(171, 164, 164, 0.6);
+  padding: 3rem;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-blanco);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-claro);
+}
+
+/* ===== Secciones ===== */
+.info {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.info:nth-child(even) {
+  background: var(--color-blanco);
+}
+
+.info h2 {
+  color: var(--color-principal);
+  margin-bottom: 1.5rem;
+}
+
+.info p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-texto);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ===== Servicios (cards) ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #9b9393;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(250, 21, 21, 0.929);
+  transition: transform 0.3s;
+  color: var(--color-texto);
+  text-align: center; /* centra el contenido */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: var(--color-principal);
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Botones ===== */
+.btn-ver-mas, .btn-card-link {
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Botón principal */
+.btn-ver-mas {
+  padding: 0.8rem 2rem;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  border: 2px solid var(--color-principal);
+}
+
+.btn-ver-mas:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-2px);
+}
+
+/* Botón dentro de tarjeta */
+.btn-card-link {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+}
+
+.btn-card-link:hover {
+  background-color: var(--color-principal);
+  transform: translateY(-1px);
+}
+
+/* ===== Contacto ===== */
+.contacto p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ===== Hero con logo ===== */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.6));
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-blanco);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--color-claro);
+}
+
+/* Contenedor para el botón principal */
+.ver-mas-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+.hero {
+  position: relative;
+  height: 110vh; /* cambia 100vh a un tamaño más pequeño, ej: 60% de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

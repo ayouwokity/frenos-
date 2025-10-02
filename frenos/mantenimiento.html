@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento - CARS FRENOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ====== Header con menú ====== -->
+  <header id="header">
+    <div class="logo">CARS FRENOS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Hero Mantenimiento ====== -->
+  <section class="hero">
+    <div class="overlay hero-content">
+      <div class="hero-text">
+        <h1>Mantenimiento Preventivo</h1>
+        <p>Previene fallos y alarga la vida útil de tu vehículo asegurando tus frenos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Información sobre el servicio ====== -->
+  <section class="info">
+    <h2>Servicio de Mantenimiento de Frenos</h2>
+    <p>
+      En <strong>CARS FRENOS</strong> realizamos mantenimientos completos del sistema de frenos,
+      incluyendo inspección, limpieza, ajuste y reemplazo de piezas desgastadas.
+    </p>
+    <p>
+      Un mantenimiento regular garantiza un frenado seguro y previene problemas graves que puedan
+      comprometer la seguridad de tu vehículo.
+    </p>
+
+    <!-- ====== Formulario de solicitud ====== -->
+    <form id="form-mantenimiento">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+
+      <label for="marca">Marca del vehículo:</label>
+      <input type="text" id="marca" name="marca" placeholder="Ej: Toyota, Chevrolet" required>
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Aveo" required>
+
+      <label for="año">Año:</label>
+      <input type="number" id="año" name="año" placeholder="Ej: 2018" required>
+
+      <button type="submit" class="btn-ver-mas">Solicitar Mantenimiento</button>
+    </form>
+  </section>
+
+  <!-- Script para animación del header -->
+  <script>
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Alerta al enviar el formulario
+    document.getElementById("form-mantenimiento").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Gracias, tu solicitud de mantenimiento ha sido enviada. Nos contactaremos pronto.");
+      this.reset();
+    });
+  </script>
+  <section id="marcas" class="info">
+  <h2>Nuestras Marcas</h2>
+  <p>Trabajamos con repuestos y accesorios de las mejores marcas para garantizar la seguridad de tu vehículo.</p>
+
+  <div class="marcas-container">
+    <img src="marcas.jpg" alt="Marca 1" class="marca-logo">
+
+  </div>
+</body>
+</html>

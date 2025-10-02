@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio de Pastillas - CARS FRENOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ====== Header con menú ====== -->
+  <header id="header">
+    <div class="logo">CARS FRENOS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Hero Cambio de Pastillas ====== -->
+  <section class="hero">
+    <div class="overlay hero-content">
+      <div class="hero-text">
+        <h1>Cambio de Pastillas de Freno</h1>
+        <p>Instalamos repuestos originales y de alta calidad para tu seguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Información sobre el servicio ====== -->
+  <section class="info">
+    <h2>Servicio de Cambio de Pastillas</h2>
+    <p>
+      En <strong>CARS FRENOS</strong> nos aseguramos de que las pastillas de freno de tu vehículo
+      estén en óptimas condiciones. Nuestro equipo utiliza repuestos originales y técnicas profesionales
+      para garantizar tu seguridad al conducir.
+    </p>
+    <p>
+      Un cambio oportuno de pastillas evita daños en los discos de freno y mejora la eficiencia
+      del sistema de frenado.
+    </p>
+
+    <!-- ====== Formulario de solicitud ====== -->
+    <form id="form-pastillas">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+
+      <label for="marca">Marca del vehículo:</label>
+      <input type="text" id="marca" name="marca" placeholder="Ej: Toyota, Chevrolet" required>
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Aveo" required>
+
+      <label for="año">Año:</label>
+      <input type="number" id="año" name="año" placeholder="Ej: 2018" required>
+
+      <button type="submit" class="btn-ver-mas">Solicitar Cambio</button>
+    </form>
+  </section>
+
+  <!-- Script para animación del header -->
+  <script>
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Ejemplo: alerta al enviar el formulario
+    document.getElementById("form-pastillas").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Gracias, tu solicitud de cambio de pastillas ha sido enviada. Nos contactaremos pronto.");
+      this.reset();
+    });
+  </script>
+  <section id="marcas" class="info">
+  <h2>Nuestras Marcas</h2>
+  <p>Trabajamos con repuestos y accesorios de las mejores marcas para garantizar la seguridad de tu vehículo.</p>
+
+  <div class="marcas-container">
+    <img src="marcas.jpg" alt="Marca 1" class="marca-logo">
+
+  </div>
+</body>
+</html>

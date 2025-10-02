@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARS FRENOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ====== Header con menú ====== -->
+  <header id="header">
+    <div class="logo">CARS FRENOS</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Sección Hero ====== -->
+<!-- ====== Sección Hero ====== -->
+<!-- ====== Sección Hero ====== -->
+<section id="inicio" class="hero">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="logo animacion _1.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <div class="overlay hero-content">
+
+    
+</section>
+
+
+  <!-- ====== Nosotros ====== -->
+  <section id="nosotros" class="info">
+    <h2>Quiénes Somos</h2>
+    <p>
+      En <strong>CARS FRENOS</strong> somos una empresa especializada en la seguridad de tu vehículo.
+      Nuestro compromiso es brindar un servicio confiable, rápido y profesional en todo lo relacionado
+      con frenos automotrices.
+    </p>
+  </section>
+
+  <!-- ====== Servicios ====== -->
+  <section id="servicios" class="info servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+        
+        <div class="card">
+            <h3>Diagnóstico</h3>
+            <p>Revisamos y detectamos cualquier problema en tus frenos.</p>
+            <a href="diagnostico.html" class="btn-card-link">Ver Más</a>
+        </div>
+        
+        <div class="card">
+            <h3>Cambio de Pastillas</h3>
+            <p>Instalamos repuestos originales y de alta calidad.</p>
+            <a href="pastillas.html" class="btn-card-link">Ver Más</a>
+        </div>
+        
+        <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Previene fallos y alarga la vida útil de tu vehículo.</p>
+            <a href="mantenimiento.html" class="btn-card-link">Ver Más</a>
+        </div>
+        
+        <div class="card">
+            <h3>Revisión General</h3>
+            <p>Control completo de seguridad para tu tranquilidad.</p>
+            <a href="revision.html" class="btn-card-link">Ver Más</a>
+        </div>
+        
+    </div>
+    
+    </section>
+  <!-- ====== Contacto ====== -->
+  <section id="contacto" class="info contacto">
+    <h2>Contacto</h2>
+    <center> <p>📍 Dirección: Cra 27#64-40,7 -7 de agosto bogota</p>
+    <p>📞 Teléfono: +57 313 4059005</p>
+    <p>📧 Email: carsfrenosgh@gmail.com</p></center>
+   
+  </section>
+
+  <!-- ====== Footer ====== -->
+
+
+  <!-- Script para animación del header -->
+  <script>
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+  <section id="marcas" class="info">
+  <h2>Nuestras Marcas</h2>
+  <p>Trabajamos con repuestos y accesorios de las mejores marcas para garantizar la seguridad de tu vehículo.</p>
+
+  <div class="marcas-container">
+    <img src="marcas.jpg" alt="Marca 1" class="marca-logo">
+
+  </div>
+</body>
+</html>

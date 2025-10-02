@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisión General - CARS FRENOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ====== Header con menú ====== -->
+  <header id="header">
+    <div class="logo">CARS FRENOS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Hero Revisión General ====== -->
+  <section class="hero">
+    <div class="overlay hero-content">
+      <div class="hero-text">
+        <h1>Revisión General de Frenos</h1>
+        <p>Control completo de seguridad para tu tranquilidad y la de tu vehículo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Información sobre el servicio ====== -->
+  <section class="info">
+    <h2>Servicio de Revisión General</h2>
+    <p>
+      En <strong>CARS FRENOS</strong> realizamos una revisión completa de tu vehículo, asegurando
+      que todos los sistemas de frenos funcionen correctamente. Esto incluye inspección de pastillas,
+      discos, líquido de frenos, frenos de mano y sensores relacionados.
+    </p>
+    <p>
+      La revisión general ayuda a prevenir accidentes, mejora la seguridad y extiende la vida útil
+      de tu vehículo.
+    </p>
+
+    <!-- ====== Formulario de solicitud ====== -->
+    <form id="form-revision">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+
+      <label for="marca">Marca del vehículo:</label>
+      <input type="text" id="marca" name="marca" placeholder="Ej: Toyota, Chevrolet" required>
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Aveo" required>
+
+      <label for="año">Año:</label>
+      <input type="number" id="año" name="año" placeholder="Ej: 2018" required>
+
+      <button type="submit" class="btn-ver-mas">Solicitar Revisión</button>
+    </form>
+  </section>
+
+  <!-- Script para animación del header -->
+  <script>
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Alerta al enviar el formulario
+    document.getElementById("form-revision").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Gracias, tu solicitud de revisión general ha sido enviada. Nos contactaremos pronto.");
+      this.reset();
+    });
+  </script>
+  <!-- ====== Nuestras Marcas ====== -->
+<section id="marcas" class="info">
+  <h2>Nuestras Marcas</h2>
+  <p>Trabajamos con repuestos y accesorios de las mejores marcas para garantizar la seguridad de tu vehículo.</p>
+
+  <div class="marcas-container">
+    <img src="marcas.jpg" alt="Marca 1" class="marca-logo">
+
+  </div>
+</section>
+
+</body>
+</html>
